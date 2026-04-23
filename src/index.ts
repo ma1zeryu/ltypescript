@@ -1,3 +1,2 @@
-let age = 18;
-
-age = 'abc';
+const aLink = document.getElementById("link") as HTMLAnchorElement;
+aLink.href;
