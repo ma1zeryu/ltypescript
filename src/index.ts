@@ -1,12 +1,13 @@
-enum Direction {
-  Up = "up",
-  Down = "down",
-  Left = "left",
-  Right = "right",
+interface Singable {
+  sing(): void;
 }
 
-function changeDirection(direction: Direction) {
-  console.log(direction);
+class Person implements Singable {
+  name = "yxc";
+  sing(): void {
+    console.log("找工作呀找工作");
+  }
 }
 
-changeDirection(Direction.Up);
+const person = new Person();
+console.log(person.name);
