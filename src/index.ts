@@ -1,13 +1,5 @@
-interface Singable {
-  sing(): void;
-}
+let obj: { readonly name: string } = {
+  name: "jack",
+};
 
-class Person implements Singable {
-  name = "yxc";
-  sing(): void {
-    console.log("找工作呀找工作");
-  }
-}
-
-const person = new Person();
-console.log(person.name);
+obj.name = "yxc";
