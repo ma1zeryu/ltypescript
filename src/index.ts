@@ -1,5 +1,16 @@
-let obj: { readonly name: string } = {
-  name: "jack",
-};
+interface Point2D {
+  x: number;
+  y: number;
+}
 
-obj.name = "yxc";
+interface Point3D {
+  x: number;
+  y: number;
+  z: number;
+}
+
+type F2 = (p: Point2D) => void;
+type F3 = (p: Point3D) => void;
+
+let f2: F2 = ({ x, y }) => {};
+let f3: F3 = f2;
